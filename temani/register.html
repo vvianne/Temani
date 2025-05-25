@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temani</title>
+    <link rel="stylesheet" href="loginregister.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="ok">
+        <div class="left">
+            <h1>Daftar</h1>
+            <form action="register.php" method="post">
+                <label for="nama">Nama</label>
+                <input class="input" type="text" name="nama" id="nama" placeholder="Nama" required>
+                <br>
+                <label for="email">Email</label>
+                <input class="input" type="email" name="email" id="email" placeholder="Email" required>
+                <br>
+                <label for="password">Kata Sandi</label>
+                <input class="input" type="password" name="password" id="password" placeholder="Kata Sandi" required>
+                <br>
+                <p>Dengan mendaftar, Anda menyetujui Syarat & Ketentuan serta Kebijakan Privasi.</p>
+                <input type="checkbox" name="setuju" id="setuju" required>
+                <label for="setuju">Setuju</label>
+                <br><br>
+                <button class="button" type="submit">Daftar</button>
+                <br>
+                <div>
+                    <p>Sudah memiliki akun?</p>
+                    <a href="login.html" class="link">Masuk</a>
+                </div>
+            </div>
+        <div class="right">
+            <img class="foto" src="asset/hamil.png" alt="Gambar">
+            <p>Bergabunglah dengan kami dan mulai perjalananmu sekarang! Masuk untuk melanjutkan atau daftar untuk menjadi bagian dari komunitas kami.</p>
+        </div>
+    </section>
+</body>
+</html>

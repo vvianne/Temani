@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 1440px;
+  background: #FFF;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  width: 1440px;
+  height: 368px;
+  border-radius: 0 0 50px 50px;
+  background: url('header.png') lightgray 50% / cover no-repeat,
+              linear-gradient(96deg, #FFF 4.88%, #9B72CF 83.12%), #C8B1E4;
+  padding: 20px 60px;
+  position: relative;
+  color: #000;
+}
+
+.navbar {
+  display: inline-flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 52px;
+  border-radius: 20px;
+  background: #F4EFFA;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+}
+
+.btn-masuk {
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: #9B72CF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-text {
+  margin-top: 60px;
+}
+
+.diary {
+  display: flex;
+  justify-content: center;
+  margin: 40px auto;
+}
+
+.mood-box {
+  display: flex;
+  width: 1251px;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  background: #F4EFFA;
+  box-shadow: 5px 5px 10px rgba(16, 16, 16, 0.2);
+}
+
+.btn-tambah-mood {
+  background: #9B72CF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.input-mood {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.mood-frame {
+  display: flex;
+  width: 1251px;
+  height: 367px;
+  padding: 20px;
+  align-items: center;
+  gap: 50px;
+  border-radius: 20px;
+  background: #F4EFFA;
+  flex-direction: column;
+  box-shadow: 5px 5px 10px rgba(16, 16, 16, 0.2);
+}
+
+.mood-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.mood-header input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.mood-options {
+  display: flex;
+  gap: 20px;
+}
+
+.mood-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+}
+
+.btn-tambahkan {
+  background: #9B72CF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.footer {
+  width: 1440px;
+  height: 300px;
+  background: #D8C9F2;
+  border-radius: 50px 50px 0 0;
+  padding: 40px 60px;
+}
+
+.footer-content {
+  color: #000;
+}
