@@ -11,7 +11,6 @@ Route::get('/', function () {
 });
 
 Route::get('/beranda', [BerandaController::class, 'index'])->name('beranda');
-Route::get('/gejala', [GejalaController::class, 'index'])->name('gejala');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -25,6 +24,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/diari', [DiariController::class, 'index'])->name('diari');
     Route::get('/diari/create', [DiariController::class, 'create'])->name('diari.create');
     Route::post('/diari', [DiariController::class, 'store'])->name('diari.store');
+
+    Route::get('/gejala', [GejalaController::class, 'index'])->name('gejala');
 });
 
 

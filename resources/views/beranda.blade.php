@@ -21,7 +21,10 @@
             }
 
             header {
-            background: linear-gradient(to right, #e8d6f4, #d4b3f0);
+            background-image: url('{{ asset('asset/header.png') }}'); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
             padding: 2rem;
             border-bottom-left-radius: 50px;
             border-bottom-right-radius: 50px;

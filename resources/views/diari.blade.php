@@ -23,7 +23,10 @@
             }
 
             header {
-            background: linear-gradient(to right, #e8d6f4, #d4b3f0);
+            background-image: url('{{ asset('asset/header.png') }}'); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
             padding: 2rem;
             border-bottom-left-radius: 50px;
             border-bottom-right-radius: 50px;
@@ -317,5 +320,13 @@
                 <button class="btn-muat-lebihBanyak">Muat Lebih Banyak</button>
             </section>
         </main>
+        <footer>
+            <strong>TEMANI</strong>
+            <div class="contact">
+                <p>@temani.ibu</p>
+                <p>0812-3456-7890</p>
+                <p>temani@gmail.com</p>
+            </div>
+        </footer>
     </body>
 </html>

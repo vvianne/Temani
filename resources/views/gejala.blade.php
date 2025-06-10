@@ -6,51 +6,91 @@
     <title>Gejala</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
-    body {
-        font-family: 'Poppins', sans-serif;
-        margin: 0;
-        background-color: #ffffff;
-        color: #333;
-    }
-    header {
-        background: linear-gradient(to right, #e8d6f4, #d4b3f0);
-        padding: 2rem;
-        border-bottom-left-radius: 50px;
-        border-bottom-right-radius: 50px;
-    }
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    nav ul {
-        list-style: none;
-        display: flex;
-        gap: 1rem;
-    }
-    nav ul li a {
-        text-decoration: none;
-        color: #333;
-        font-weight: 600;
-        padding: 0.5rem 1rem;
-        border-radius: 10px;
-    }
-    nav ul li a.active {
-        background-color: #c79bf2;
-        color: white;
-    }
-    .hero {
-        margin-top: 2rem;
-    }
-    .hero h1 {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-        color: #2F184B;
-    }
-    .hero p {
-        font-size: 1rem;
-        color: #555;
-    }
+* {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                /* border: 1px red solid; */
+            }
+
+            body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: #ffffff;
+            color: #333;
+            }
+
+            header {
+            background-image: url('{{ asset('asset/header.png') }}'); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            padding: 2rem;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            }
+
+            nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            }
+
+            nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            }
+
+            nav ul li {
+            margin: 0;
+            }
+
+            nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            display: inline-block;
+            }
+
+            nav ul li a.active {
+            background-color: #c79bf2;
+            color: white;
+            }
+
+            .btn-masuk, .btn-logout {
+            background-color: #9c4ef4;
+            color: white;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            display: inline-block;
+            }
+
+            .text-judul-besar {
+            margin-top: 2rem;
+            }
+
+            .text-judul-besar h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #4a1f7e;
+            }
+
+            .text-judul-besar p {
+            font-size: 1rem;
+            color: #555;
+            }
     .section {
         padding: 2rem;
     }
@@ -104,21 +144,38 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div><strong>Temani</strong></div>
-            <ul>
-                <li><a href="{{ route('beranda') }}">Beranda</a></li>
+            <nav>
+                <div><strong>Temani</strong></div>
+                <ul>
+                    <li><a href="{{ route('beranda') }}">Beranda</a></li>
                     <li><a href="{{ route('diari') }}">Diari Hamil</a></li>
                     <li><a href="#">Belajar</a></li>
                     <li><a href="{{ route('gejala') }}" class="active">Gejala</a></li>
-                <li><a href="#" style="background:#9c4ef4; color:white;">Masuk</a></li>
-            </ul>
-        </nav>
-        <div class="hero">
-            <h1>Halo, Amanda!</h1>
-            <p>Bagaimana kondisimu hari ini? Ayo konsultasikan dengan kami!</p>
-        </div>
-    </header>
+
+                    @auth
+                        <li>
+                            <form method="POST" action="{{ route('logout') }}" style="display: inline;">
+                                @csrf
+                                <button type="submit" class="btn-logout">Logout</button>
+                            </form>
+                        </li>
+                    @else
+                        <li><a href="{{ route('login') }}" class="btn-masuk">Masuk</a></li>
+                    @endauth
+                </ul>
+            </nav>
+            <div class="text-judul-besar">
+                @auth
+                    <h1 class="header-title">Halo, {{ Auth::user()->name }}!</h1>
+                    <p class="header-subtitle">Ini adalah konten khusus untuk Anda yang sudah login.</p>
+                @endauth
+
+                @guest
+                    <h1 class="header-title">Selamat Datang di Temani App!</h1>
+                    <p class="header-subtitle">Silakan login atau daftar untuk melanjutkan.</p>
+                @endguest
+            </div>
+        </header>
     <section class="section">
         <h2>Kenali Gejala</h2>
         <p>Yuk, kenali gejala yang umum dialami selama kehamilan agar kamu dan pasangan lebih siap!</p>
