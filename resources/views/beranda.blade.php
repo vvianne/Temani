@@ -221,7 +221,7 @@
         <div class="text-judul-besar">
             @auth
                 <h1 class="header-title">Selamat Datang Kembali, {{ Auth::user()->name }}!</h1>
-                <p class="header-subtitle">Ini adalah konten khusus untuk Anda yang sudah login.</p>
+                <p class="header-subtitle">Bagaimana kondisimu hari ini? Ayo konsultasikan dengan kami!</p>
             @endauth
 
             @guest

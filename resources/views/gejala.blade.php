@@ -128,6 +128,7 @@
 
         .card .content h3 {
             margin: 0.5rem 0;
+            color: #4a1f7e;
         }
 
         .card .content p {
