@@ -10,14 +10,14 @@
                 margin: 0;
                 padding: 0;
                 box-sizing: border-box;
-                border: 1px red solid;
+                /* border: 1px red solid; */
             }
+
             body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             background-color: #ffffff;
             color: #333;
-            border: 1px red solid;
             }
 
             header {
@@ -37,6 +37,13 @@
             list-style: none;
             display: flex;
             gap: 1rem;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            }
+
+            nav ul li {
+            margin: 0;
             }
 
             nav ul li a {
@@ -45,6 +52,7 @@
             font-weight: 600;
             padding: 0.5rem 1rem;
             border-radius: 10px;
+            display: inline-block;
             }
 
             nav ul li a.active {
@@ -52,17 +60,31 @@
             color: white;
             }
 
-            .hero {
+            .btn-masuk, .btn-logout {
+            background-color: #9c4ef4;
+            color: white;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            display: inline-block;
+            }
+
+            .text-judul-besar {
             margin-top: 2rem;
             }
 
-            .hero h1 {
+            .text-judul-besar h1 {
             font-size: 2rem;
             margin-bottom: 0.5rem;
             color: #4a1f7e;
             }
 
-            .hero p {
+            .text-judul-besar p {
             font-size: 1rem;
             color: #555;
             }
@@ -146,10 +168,11 @@
                     <li><a href="{{ route('beranda') }}" class="active">Beranda</a></li>
                     <li><a href="{{ route('diari') }}">Diari Hamil</a></li>
                     <li><a href="#">Belajar</a></li>
-                    <li><a href="{{ route('gejala') }}">Gejala</a></li>                    
+                    <li><a href="{{ route('gejala') }}">Gejala</a></li>
+
                     @auth
                         <li>
-                            <form method="POST" action="{{ route('logout') }}">
+                            <form method="POST" action="{{ route('logout') }}" style="display: inline;">
                                 @csrf
                                 <button type="submit" class="btn-logout">Logout</button>
                             </form>
@@ -159,15 +182,15 @@
                     @endauth
                 </ul>
             </nav>
-            <div class="hero">
+            <div class="text-judul-besar">
                 @auth
-                    <h1>Selamat Datang Kembali, {{ Auth::user()->name }}!</h1>
-                    <p>Ini adalah konten khusus untuk Anda yang sudah login.</p>
+                    <h1 class="header-title">Selamat Datang Kembali, {{ Auth::user()->name }}!</h1>
+                    <p class="header-subtitle">Ini adalah konten khusus untuk Anda yang sudah login.</p>
                 @endauth
 
                 @guest
-                    <h1>Selamat Datang di Temani App!</h1>
-                    <p>Silakan login atau daftar untuk melanjutkan.</p>
+                    <h1 class="header-title">Selamat Datang di Temani App!</h1>
+                    <p class="header-subtitle">Silakan login atau daftar untuk melanjutkan.</p>
                 @endguest
             </div>
         </header>

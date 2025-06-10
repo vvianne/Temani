@@ -8,6 +8,13 @@
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                /* border: 1px red solid; */
+            }
+            
             body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -271,14 +278,14 @@
                 <div class="mood-general">
                     <div class="mood-card">
                         @if ($currentMood)
-                            <img src="{{ asset('asset/mood-' . strtolower($currentMood->perasaan) . '.png') }}" alt="{{ $currentMood->perasaan }}" class="mood-icon" />
+                            <img src="{{ asset('asset/mood/' . strtolower($currentMood->perasaan) . '.png') }}" alt="{{ $currentMood->perasaan }}" class="mood-icon" />
                             <div class="mood-content">
                                 <h2>Perasaan Anda saat ini?</h2>
                                 <p><strong>{{ $currentMood->perasaan }}</strong></p>
                                 <p>{{ $currentMood->catatan }}</p>
                             </div>
                         @else
-                            <img src="{{ asset('asset/mood-neutral.png') }}" alt="Mood Default" class="mood-icon" /> 
+                            <img src="{{ asset('asset/mood/Ceria.png') }}" alt="Mood Default" class="mood-icon" /> 
                             <div class="mood-content">
                                 <h2>Perasaan Anda saat ini?</h2>
                                 <p><strong>Belum ada catatan mood hari ini.</strong></p>
@@ -299,7 +306,7 @@
                     <div class="diary-entry">
                         <span class="diary-date">{{ \Carbon\Carbon::parse($record->tanggal)->format('d F Y') }}</span>
                         <div class="diary-card">
-                            <img src="{{ asset('asset/mood orange' . strtolower($record->perasaan) . '.png') }}" alt="{{ $record->perasaan }}" />
+                            <img src="{{ asset('asset/mood/' . strtolower($record->perasaan) . '.png') }}" alt="{{ $record->perasaan }}" />
                             <p><strong>{{ $record->perasaan }}</strong> {{ $record->catatan }}</p>
                         </div>
                     </div>
