@@ -186,7 +186,7 @@
             <ul>
                 <li><a href="{{ route('beranda') }}">Beranda</a></li>
                 <li><a href="{{ route('diari') }}">Diari Hamil</a></li>
-                <li><a href="#">Belajar</a></li>
+                <li><a href="{{ route('belajar') }}">Belajar</a></li>
                 <li><a href="{{ route('gejala') }}" class="active">Gejala</a></li>
 
                 @auth
@@ -202,15 +202,8 @@
             </ul>
         </nav>
         <div class="text-judul-besar">
-            @auth
-                <h1 class="header-title">Halo, {{ Auth::user()->name }}!</h1>
-                <p class="header-subtitle">Ini adalah konten khusus untuk Anda yang sudah login.</p>
-            @endauth
-
-            @guest
-                <h1 class="header-title">Selamat Datang di Temani App!</h1>
-                <p class="header-subtitle">Silakan login atau daftar untuk melanjutkan.</p>
-            @endguest
+            <h1 class="header-title">Halo, {{ Auth::user()->name }}!</h1>
+            <p class="header-subtitle">Bagaimana kondisimu hari ini? Ayo konsultasikan dengan kami!</p>
         </div>
     </header>
     <section class="section">

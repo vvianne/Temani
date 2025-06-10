@@ -203,7 +203,7 @@
             <ul>
                 <li><a href="{{ route('beranda') }}" class="active">Beranda</a></li>
                 <li><a href="{{ route('diari') }}">Diari Hamil</a></li>
-                <li><a href="#">Belajar</a></li>
+                <li><a href="{{ route('belajar') }}">Belajar</a></li>
                 <li><a href="{{ route('gejala') }}">Gejala</a></li>
 
                 @auth

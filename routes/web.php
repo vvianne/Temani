@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\GejalaController;
 use App\Http\Controllers\DiariController;
+use App\Http\Controllers\BelajarController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -28,6 +29,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/diari', [DiariController::class, 'store'])->name('diari.store');
 
     Route::get('/gejala', [GejalaController::class, 'index'])->name('gejala');
+
+    Route::get('/belajar', [BelajarController::class, 'index'])->name('belajar');
 });
 
 

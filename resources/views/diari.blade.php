@@ -273,7 +273,7 @@
             <ul>
                 <li><a href="{{ route('beranda') }}">Beranda</a></li>
                 <li><a href="{{ route('diari') }}" class="active">Diari Hamil</a></li>
-                <li><a href="#">Belajar</a></li>
+                <li><a href="{{ route('belajar') }}">Belajar</a></li>
                 <li><a href="{{ route('gejala') }}">Gejala</a></li>
 
                 @auth
