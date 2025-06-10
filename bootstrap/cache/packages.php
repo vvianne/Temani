@@ -1,4 +1,11 @@
 <?php return array (
+  'blade-ui-kit/blade-icons' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'BladeUI\\Icons\\BladeIconsServiceProvider',
+    ),
+  ),
   'laravel/breeze' => 
   array (
     'providers' => 
@@ -46,6 +53,13 @@
     'providers' => 
     array (
       0 => 'Termwind\\Laravel\\TermwindServiceProvider',
+    ),
+  ),
+  'postare/blade-mdi' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Postare\\BladeMdi\\BladeMdiServiceProvider',
     ),
   ),
 );

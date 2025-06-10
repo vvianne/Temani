@@ -150,13 +150,33 @@
 
         footer {
             background-color: #cfa9f5;
-            padding: 2rem;
+            padding: 3rem 8rem 3rem 8rem;
             color: #333;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
         }
 
-        footer .contact {
-            margin-top: 1rem;
+        .footer-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-logo {
+            width: 80px;
+            height: auto;
+        }
+
+        .footer-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4a1f7e;
+            font-family: Poppins, sans-serif;
         }
 
         .btn-masuk,
@@ -212,17 +232,20 @@
     </header>
     <section class="trimester-section">
         <div class="trimester-box">
+            <img src="{{ asset('asset/beranda/pregnancy.png') }}" class="icon" />
             <h3>Trimester pertama (minggu 1-13)</h3>
             <p>Adalah masa adaptasi tubuh ibu dengan perubahan hormonal, nutrisi, dan pertumbuhan embrio. Ibu mungkin
                 mengalami mual, muntah, perubahan emosional, dan kelelahan. Pada masa ini, organ penting seperti jantung
                 dan otak mulai terbentuk.</p>
         </div>
         <div class="trimester-box">
+            <img src="{{ asset('asset/beranda/pregnant.png') }}" class="icon" />
             <h3>Trimester kedua (minggu 13-27)</h3>
             <p>Masa kehamilan yang lebih stabil. Gejala mual mereda, ibu mulai merasakan gerakan janin, dan tubuh mulai
                 beradaptasi lebih baik. Pertumbuhan janin makin jelas terlihat dan organ dalam berkembang cepat.</p>
         </div>
         <div class="trimester-box">
+            <img src="{{ asset('asset/beranda/mother.png') }}" class="icon" />
             <h3>Trimester ketiga (minggu 28-40)</h3>
             <p>Ditandai dengan pertumbuhan janin pesat dan persiapan untuk persalinan. Ibu sering mengalami
                 ketidaknyamanan karena perut membesar, sulit tidur, dan kontraksi palsu.</p>
@@ -232,7 +255,7 @@
         <h2 style="margin-bottom: 0.5rem;">Fitur Kami</h2>
         <div class="feature-box">
             <div class="feature-icon">
-                <img src="{{ asset('asset/notebook.png') }}" class="icon" />
+                <img src="{{ asset('asset/beranda/notebook.png') }}" class="icon" />
             </div>
             <div>
                 <h4>Diari Hamil</h4>
@@ -243,7 +266,7 @@
         </div>
         <div class="feature-box">
             <div class="feature-icon">
-                <img src="{{ asset('asset/study.png') }}" class="icon" />
+                <img src="{{ asset('asset/beranda/study.png') }}" class="icon" />
             </div>
             <div>
                 <h4>Belajar</h4>
@@ -253,7 +276,7 @@
         </div>
         <div class="feature-box">
             <div class="feature-icon">
-                <img src="{{ asset('asset/symptoms.png') }}" class="icon" />
+                <img src="{{ asset('asset/beranda/symptoms.png') }}" class="icon" />
             </div>
             <div>
                 <h4>Gejala</h4>
@@ -263,8 +286,11 @@
         </div>
     </section>
     <footer>
-        <strong>TEMANI</strong>
-        <div class="contact">
+        <div class="footer-left">
+            <img src="{{ asset('asset/hamil.png') }}" alt="Temani Logo" class="footer-logo">
+            <span class="footer-title">TEMANI</span>
+        </div>
+        <div class="footer-right">
             <p>@temani.ibu</p>
             <p>0812-3456-7890</p>
             <p>temani@gmail.com</p>

@@ -225,13 +225,33 @@
 
         footer {
             background-color: #cfa9f5;
-            padding: 2rem;
+            padding: 3rem 8rem 3rem 8rem;
             color: #333;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
         }
 
-        footer .contact {
-            margin-top: 1rem;
+        .footer-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-logo {
+            width: 80px;
+            height: auto;
+        }
+
+        .footer-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4a1f7e;
+            font-family: Poppins, sans-serif;
         }
 
         .alert-success {
@@ -325,12 +345,15 @@
                 <p style="text-align: center; color: #666;">Belum ada riwayat diari kehamilan yang tercatat.</p>
             @endforelse
 
-            <button class="btn-muat-lebihBanyak">Muat Lebih Banyak</button>
+            <!-- <button class="btn-muat-lebihBanyak">Muat Lebih Banyak</button> -->
         </section>
     </main>
     <footer>
-        <strong>TEMANI</strong>
-        <div class="contact">
+        <div class="footer-left">
+            <img src="{{ asset('asset/hamil.png') }}" alt="Temani Logo" class="footer-logo">
+            <span class="footer-title">TEMANI</span>
+        </div>
+        <div class="footer-right">
             <p>@temani.ibu</p>
             <p>0812-3456-7890</p>
             <p>temani@gmail.com</p>
