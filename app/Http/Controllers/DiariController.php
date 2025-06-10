@@ -19,8 +19,8 @@ class DiariController extends Controller
 
     public function index(): View
     {
-        $diariHamilRecords = Auth::user()->diariHamil()->latest('tanggal')->get();
-        $currentMood = Auth::user()->diariHamil()->latest('tanggal')->first();
+        $diariHamilRecords = Auth::user()->diariHamil()->latest('created_at')->get();
+        $currentMood = Auth::user()->diariHamil()->latest('created_at')->first();
         return view('diari', compact('diariHamilRecords', 'currentMood'));
     }
 

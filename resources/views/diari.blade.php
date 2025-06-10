@@ -304,7 +304,7 @@
 
                 @forelse ($diariHamilRecords as $record)
                     <div class="diary-entry">
-                        <span class="diary-date">{{ \Carbon\Carbon::parse($record->tanggal)->format('d F Y') }}</span>
+                        <span class="diary-date">{{ \Carbon\Carbon::parse($record->created_at)->format('d F Y, H:i') }}</span>
                         <div class="diary-card">
                             <img src="{{ asset('asset/mood/' . strtolower($record->perasaan) . '.png') }}" alt="{{ $record->perasaan }}" />
                             <p><strong>{{ $record->perasaan }}</strong> {{ $record->catatan }}</p>
