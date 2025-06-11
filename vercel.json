@@ -2,7 +2,7 @@
     "version": 2,
     "framework": null,
     "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.6.0" }
+        "api/index.php": { "runtime": "vercel-php@0.7.1" }
     },
     "routes": [
         {
@@ -13,7 +13,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://temani.vercel.app",
+        "APP_URL": "https://temani-production.up.railway.app",
         "APP_KEY": "base64:6nbwxz0ZACe6GAeWx+unTxBGzrrj8GA/tz7veHvbgjI=",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
