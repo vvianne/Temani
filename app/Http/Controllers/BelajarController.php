@@ -11,4 +11,9 @@ class BelajarController extends Controller
     {
         return view('belajar');
     }
+
+    public function enroll(): View
+    {
+        return view('belajar.enroll');
+    }
 }

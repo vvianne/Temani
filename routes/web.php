@@ -31,6 +31,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/gejala', [GejalaController::class, 'index'])->name('gejala');
 
     Route::get('/belajar', [BelajarController::class, 'index'])->name('belajar');
+    Route::get('/belajar/enroll', [BelajarController::class, 'enroll'])->name('belajar.enroll');
+
 });
 
 

@@ -264,7 +264,9 @@
                     <h2>Persiapan Kehamilan Sehat untuk Anda</h2>
                     <small>Langkah awal menjadi ibu siaga</small>
                 </div>
-                <button>Lihat Selengkapnya</button>
+                <button>
+                    <a href="{{ route('belajar.enroll') }}">Lihat Selengkapnya</a>
+                </button>
             </div>
             <div class="images">
                 <img src="{{ asset('asset/belajar/Image1.png') }}" alt="Ibu hamil 1">

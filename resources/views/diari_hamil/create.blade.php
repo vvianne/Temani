@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diari Kehamilan - Temani</title>
 
     <style>
@@ -62,7 +63,8 @@
             color: white;
         }
 
-        .btn-masuk, .btn-logout {
+        .btn-masuk,
+        .btn-logout {
             background-color: #9c4ef4;
             color: white;
             font-weight: 600;
@@ -90,24 +92,24 @@
             font-size: 1rem;
             color: #555;
         }
-        
+
         .mood-section {
             padding: 2rem;
         }
-        
+
         .mood-general {
             display: flex;
             align-items: flex-start;
             background: #f6f3fa;
             border-radius: 15px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             padding: 2rem;
             margin: 0 auto;
             gap: 1rem;
             max-width: 1150px;
             width: 100%;
         }
-        
+
         .mood-card {
             display: flex;
             justify-content: space-between;
@@ -116,22 +118,22 @@
             padding: 20px;
             gap: 50px;
         }
-        
+
         .mood-iconBesar {
             width: 130px;
             height: 130px;
             flex-shrink: 0;
         }
-        
+
         .mood-content {
             flex: 1;
             text-align: justify;
         }
-        
+
         .mood-content h2 {
             color: #4a1f7e;
         }
-        
+
         .btn-mood {
             display: flex;
             padding: 8px 16px;
@@ -145,13 +147,13 @@
             font-weight: 600;
             cursor: pointer;
         }
-        
+
         .input-mood {
             display: flex;
             justify-content: center;
             margin: 2rem auto;
         }
-        
+
         .mood-frame {
             display: flex;
             flex-direction: column;
@@ -162,35 +164,35 @@
             background: #f4eefd;
             padding: 2rem;
             border-radius: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
-        
+
         .mood-header {
-            background-color:rgb(249, 249, 249);
+            background-color: rgb(249, 249, 249);
             border-radius: 15px;
             padding: 10px 15px;
             width: 100%;
             box-sizing: border-box;
         }
-        
+
         .mood-header textarea {
             width: 100%;
             border: none;
             background: transparent;
             font-family: 'Poppins', sans-serif;
             font-size: 16px;
-            color:rgb(51, 51, 51);
+            color: rgb(51, 51, 51);
             outline: none;
             resize: vertical;
         }
-        
+
         .mood-options {
             display: flex;
             justify-content: space-between;
             gap: 15px;
             flex-wrap: wrap;
         }
-        
+
         .mood-visual {
             width: 80px;
             height: 80px;
@@ -202,31 +204,31 @@
             border: 3px solid transparent;
             transition: all 0.2s ease;
         }
-        
+
         .mood-visual:hover {
             background-color: #8f57c7 !important;
         }
-        
+
         .mood-visual img {
             width: 100%;
             height: 100%;
             object-fit: contain;
         }
-        
+
         .mood-label {
             text-align: center;
             font-size: 12px;
             color: #4a1f7e;
             margin-top: 4px;
         }
-        
+
         .mood-group {
             display: flex;
             flex-direction: column;
             align-items: center;
             cursor: pointer;
         }
-        
+
         .btn-tambahkan {
             display: flex;
             padding: 8px 16px;
@@ -240,7 +242,7 @@
             font-weight: 600;
             cursor: pointer;
         }
-        
+
         .btn-tambah-mood {
             background-color: #a270d8;
             color: white;
@@ -251,12 +253,12 @@
             cursor: pointer;
             transition: background 0.2s ease;
         }
-        
+
         .btn-tambah-mood:hover {
             background-color: #8f57c7;
         }
 
-        input[type="radio"]:checked + .mood-visual {
+        input[type="radio"]:checked+.mood-visual {
             border-color: #9c4ef4;
             box-shadow: 0 0 0 4px rgba(156, 78, 244, 0.4);
         }
@@ -274,12 +276,13 @@
             color: #333;
             text-align: center;
         }
-        
+
         footer .contact {
             margin-top: 1rem;
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav>
@@ -315,7 +318,8 @@
             <h3 style="color: #000; font-weight: 600; align-self: flex-start;">Masukkan kondisi mood Anda</h3>
 
             <div class="mood-header">
-                <textarea name="catatan" id="catatan" rows="4" placeholder="Tulis catatan harian Anda di sini..." required>{{ old('catatan') }}</textarea>
+                <textarea name="catatan" id="catatan" rows="4" placeholder="Tulis catatan harian Anda di sini..."
+                    required>{{ old('catatan') }}</textarea>
             </div>
             @error('catatan')
                 <p class="error-message" style="align-self: flex-start;">{{ $message }}</p>
@@ -338,8 +342,10 @@
 
                 @foreach ($moods as $mood)
                     <div class="mood-group">
-                        <input type="radio" name="perasaan" id="mood_{{ $mood['value'] }}" value="{{ $mood['value'] }}" hidden {{ old('perasaan') == $mood['value'] ? 'checked' : '' }}>
-                        <label for="mood_{{ $mood['value'] }}" class="mood-visual" style="background-color: {{ $mood['color'] }};">
+                        <input type="radio" name="perasaan" id="mood_{{ $mood['value'] }}" value="{{ $mood['value'] }}"
+                            hidden {{ old('perasaan') == $mood['value'] ? 'checked' : '' }}>
+                        <label for="mood_{{ $mood['value'] }}" class="mood-visual"
+                            style="background-color: {{ $mood['color'] }};">
                             <img src="{{ asset('asset/' . $mood['image']) }}" alt="{{ $mood['label'] }}" />
                         </label>
                         <div class="mood-label">{{ $mood['label'] }}</div>
@@ -363,4 +369,5 @@
         </div>
     </footer>
 </body>
+
 </html>
