@@ -1,61 +1,50 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h1 align="center">Temani App 🤰✨</h1>
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+Aplikasi sahabat terbaik untuk para ibu hamil, mendampingi Anda di setiap trimester kehamilan.
 </p>
 
-## About Laravel
+## Tentang Temani
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Temani adalah aplikasi web yang didedikasikan untuk mendukung perjalanan kehamilan para ibu. Kami percaya bahwa setiap tahapan kehamilan adalah pengalaman yang berharga, dan Temani hadir untuk memberikan informasi yang akurat, panduan yang relevan, serta fitur-fitur yang memudahkan ibu hamil dalam memahami perubahan pada diri dan janinnya.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Kami mengambil inti dari pengalaman pengembangan yang menyenangkan, dan menerapkannya dalam menyajikan fitur, seperti:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Diari Hamil** : Fitur Diari Hamil memungkinkan ibu mencatat suasana hati atau mood yang dirasakan setiap harinya. Dengan mencatat perubahan emosi dan kondisi tubuh, ibu hamil dapat memahami kondisi mereka sendiri lebih baik.
+- **Belajar** : Fitur Belajar menyediakan lima modul edukatif untuk mendampingi pengguna dari tahap awal kehamilan hingga masa persiapan melahirkan. Dirancang oleh tenaga medis dan konselor terpercaya.
+- **Gejala** : Fitur Gejala memuat daftar gejala umum selama kehamilan seperti mual, nyeri punggung, dan sembelit. Berguna untuk meningkatkan kewaspadaan dan membantu ibu mengenali kondisi mereka.
 
-## Learning Laravel
+Temani dirancang agar mudah diakses, informatif, dan menyediakan alat yang dibutuhkan untuk pengalaman kehamilan yang lebih tenang dan terencana.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Screenshot Aplikasi
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Berikut adalah beberapa tampilan dari aplikasi Temani:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Halaman Beranda
+<p align="center">
+<img src="https://drive.google.com/file/d/1i60ryNppjICtjZVK03FQfF3r8V_o_NwR/view?usp=drive_link" width="600" alt="Screenshot Halaman Beranda Temani">
+</p>
 
-## Laravel Sponsors
+### Diari Hamil
+<p align="center">
+<img src="https://drive.google.com/file/d/1q9Wa-K_IZnkWeqyXI3Ta_pFKHaAdUWAD/view?usp=drive_link" width="600" alt="Screenshot Halaman Diari Hamil">
+</p>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Belajar
+<p align="center">
+<img src="https://drive.google.com/file/d/1dMPsERDEWgiLVpgLo7p-xUimjf2YxB22/view?usp=drive_link" width="600" alt="Screenshot Halaman Belajar">
+</p>
 
-### Premium Partners
+### Gejala
+<p align="center">
+<img src="https://drive.google.com/file/d/1nWjISfYw1gCvTRs2QSyvDnvltIXTWYZQ/view?usp=drive_link" width="600" alt="Screenshot Halaman Gejala">
+</p>
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## Teknologi yang Digunakan
 
-## Contributing
+* **Frontend:** HTML, CSS
+* **Backend:** PHP Laravel
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Lisensi
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Aplikasi Temani ini adalah proyek sumber terbuka yang dilisensikan di bawah [Lisensi MIT](https://opensource.org/licenses/MIT).
