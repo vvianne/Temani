@@ -508,9 +508,8 @@
 
     <section class="consultation-section">
         <h2>Butuh Bantuan Lebih Lanjut?</h2>
-        <p>Jangan ragu untuk bertanya atau berkonsultasi dengan ahli kami. Kami siap menemani perjalanan kehamilan Anda.
-        </p>
-        <a href="#" class="btn-consult">Konsultasi Sekarang</a>
+        <p>Jangan ragu untuk terus belajar bersama Temani! Kami siap menemani perjalanan kehamilan Anda.</p>
+        <a href="#" class="btn-consult">Mulai Sekarang</a>
     </section>
 
     <footer>
