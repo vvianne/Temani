@@ -22,22 +22,22 @@ Berikut adalah beberapa tampilan dari aplikasi Temani:
 
 ### Halaman Beranda
 <p align="center">
-<img src="https://drive.google.com/file/d/1i60ryNppjICtjZVK03FQfF3r8V_o_NwR/view?usp=drive_link" width="600" alt="Screenshot Halaman Beranda Temani">
+<img src="docs/Beranda.png" width="600" alt="Screenshot Halaman Beranda Temani">
 </p>
 
 ### Diari Hamil
 <p align="center">
-<img src="https://drive.google.com/file/d/1q9Wa-K_IZnkWeqyXI3Ta_pFKHaAdUWAD/view?usp=drive_link" width="600" alt="Screenshot Halaman Diari Hamil">
+<img src="docs/Diari.png" width="600" alt="Screenshot Halaman Diari Hamil">
 </p>
 
 ### Belajar
 <p align="center">
-<img src="https://drive.google.com/file/d/1dMPsERDEWgiLVpgLo7p-xUimjf2YxB22/view?usp=drive_link" width="600" alt="Screenshot Halaman Belajar">
+<img src="docs/Belajar.png" width="600" alt="Screenshot Halaman Belajar">
 </p>
 
 ### Gejala
 <p align="center">
-<img src="https://drive.google.com/file/d/1nWjISfYw1gCvTRs2QSyvDnvltIXTWYZQ/view?usp=drive_link" width="600" alt="Screenshot Halaman Gejala">
+<img src="docs/Gejala.png" width="600" alt="Screenshot Halaman Gejala">
 </p>
 
 ## Teknologi yang Digunakan
