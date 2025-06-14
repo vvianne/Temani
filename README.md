@@ -16,30 +16,6 @@ Kami mengambil inti dari pengalaman pengembangan yang menyenangkan, dan menerapk
 
 Temani dirancang agar mudah diakses, informatif, dan menyediakan alat yang dibutuhkan untuk pengalaman kehamilan yang lebih tenang dan terencana.
 
-## Screenshot Aplikasi
-
-Berikut adalah beberapa tampilan dari aplikasi Temani:
-
-### Halaman Beranda
-<p align="center">
-<img src="docs/Beranda.png" width="600" alt="Screenshot Halaman Beranda Temani">
-</p>
-
-### Diari Hamil
-<p align="center">
-<img src="docs/Diari.png" width="600" alt="Screenshot Halaman Diari Hamil">
-</p>
-
-### Belajar
-<p align="center">
-<img src="docs/Belajar.png" width="600" alt="Screenshot Halaman Belajar">
-</p>
-
-### Gejala
-<p align="center">
-<img src="docs/Gejala.png" width="600" alt="Screenshot Halaman Gejala">
-</p>
-
 ## Teknologi yang Digunakan
 
 * **Frontend:** HTML, CSS
