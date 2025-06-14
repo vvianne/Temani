@@ -58,11 +58,17 @@
             padding: 0.5rem 1rem;
             border-radius: 10px;
             display: inline-block;
+            color: #4a1f7e;
         }
 
         nav ul li a.active {
             background-color: #c79bf2;
             color: white;
+        }
+
+        nav ul li a:hover {
+            background-color: #F4EFFA;
+            color: #4a1f7e;
         }
 
         .btn-masuk,
@@ -78,6 +84,12 @@
             font-family: 'Poppins', sans-serif;
             font-size: 1rem;
             display: inline-block;
+        }
+
+        .btn-masuk:hover,
+        .btn-logout:hover {
+            background-color: #4a1f7e;
+            color: white;
         }
 
         .text-judul-besar {

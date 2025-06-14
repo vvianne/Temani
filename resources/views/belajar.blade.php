@@ -58,11 +58,17 @@
             padding: 0.5rem 1rem;
             border-radius: 10px;
             display: inline-block;
+            color: #4a1f7e;
         }
 
         nav ul li a.active {
             background-color: #c79bf2;
             color: white;
+        }
+
+        nav ul li a:hover {
+            background-color: #F4EFFA;
+            color: #4a1f7e;
         }
 
         .btn-masuk,
@@ -79,6 +85,13 @@
             font-size: 1rem;
             display: inline-block;
         }
+
+        .btn-masuk:hover,
+        .btn-logout:hover {
+            background-color: #4a1f7e;
+            color: white;
+        }
+
 
         .text-judul-besar {
             margin-top: 2rem;
@@ -144,13 +157,26 @@
         }
 
         .top-row button {
-            background-color: #a56dfd;
-            color: white;
-            padding: 8px 16px;
+            font-size: 24px;
+            background-color: transparent;
             border: none;
-            border-radius: 10px;
+            margin: 0;
+        }
+
+        .top-row button a {
+            display: flex;
+            padding: 8px 16px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            background-color: #b479f9;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
             cursor: pointer;
-            font-size: 14px;
+            text-decoration: none;
+            font-size: 16px;
         }
 
         .images {
