@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\RedirectResponse; 
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 use Illuminate\View\View;
@@ -40,7 +40,29 @@ class DiariController extends Controller
         $validatedData['user_id'] = Auth::id();
 
         Auth::user()->diariHamil()->create($validatedData);
-    
+
         return redirect()->route('diari')->with('success', 'Mood harian berhasil ditambahkan!');
+    }
+
+    public function update(Request $request, string $id): RedirectResponse
+    {
+        $diariHamil = DiariHamil::where('id', $id)->where('user_id', Auth::id())->firstOrFail();
+
+        $validatedData = $request->validate([
+            'catatan' => 'required|string|max:1000',
+            'perasaan' => 'required|string|max:255',
+        ]);
+
+        $diariHamil->update($validatedData);
+
+        return redirect()->route('diari')->with('success', 'Catatan diari berhasil diperbarui!');
+    }
+
+    public function destroy(string $id): RedirectResponse
+    {
+        $diariHamil = DiariHamil::where('id', $id)->where('user_id', Auth::id())->firstOrFail();
+        $diariHamil->delete();
+
+        return redirect()->route('diari')->with('success', 'Catatan diari berhasil dihapus!');
     }
 }

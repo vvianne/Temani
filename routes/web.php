@@ -27,6 +27,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/diari', [DiariController::class, 'index'])->name('diari');
     Route::get('/diari/create', [DiariController::class, 'create'])->name('diari.create');
     Route::post('/diari', [DiariController::class, 'store'])->name('diari.store');
+    Route::put('/diari/{id}', [DiariController::class, 'update'])->name('diari.update'); // New
+    Route::delete('/diari/{id}', [DiariController::class, 'destroy'])->name('diari.destroy'); // New
 
     Route::get('/gejala', [GejalaController::class, 'index'])->name('gejala');
 

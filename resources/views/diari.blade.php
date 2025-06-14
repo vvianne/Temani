@@ -185,30 +185,64 @@
 
         .diary-card {
             display: flex;
-            padding: 20px;
-            justify-content: center;
             align-items: center;
             gap: 20px;
             flex: 1 0 0;
             align-self: stretch;
             background-color: #fff2e7;
             border-radius: 10px;
+            padding: 20px;
+        }
+
+        .diary-content-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-grow: 1;
         }
 
         .diary-card img {
             width: 52px;
             height: 52px;
+            flex-shrink: 0;
         }
 
         .diary-card p {
             margin: 0;
-            text-align: justify;
+            text-align: left;
         }
 
         .diary-card strong {
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.2rem;
             color: #4a1f7e;
+        }
+
+        .diary-actions {
+            display: flex;
+            gap: 10px;
+            margin-left: auto;
+            flex-shrink: 0;
+        }
+
+        .btn-action {
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .edit-btn {
+            background-color: #b479f9;
+            color: white;
+        }
+
+        .delete-btn {
+            background-color: #d9534f;
+            color: white;
         }
 
         .btn-muat-lebihBanyak {
@@ -336,9 +370,22 @@
                 <div class="diary-entry">
                     <span class="diary-date">{{ \Carbon\Carbon::parse($record->created_at)->format('d F Y, H:i') }}</span>
                     <div class="diary-card">
-                        <img src="{{ asset('asset/mood/' . strtolower($record->perasaan) . '.png') }}"
-                            alt="{{ $record->perasaan }}" />
-                        <p><strong>{{ $record->perasaan }}</strong> {{ $record->catatan }}</p>
+                        <div class="diary-content-wrapper"> <img
+                                src="{{ asset('asset/mood/' . strtolower($record->perasaan) . '.png') }}"
+                                alt="{{ $record->perasaan }}" />
+                            <p><strong>{{ $record->perasaan }}</strong> {{ $record->catatan }}</p>
+                        </div>
+                        <div class="diary-actions">
+                            <button class="btn-action edit-btn" data-id="{{ $record->id }}"
+                                data-perasaan="{{ $record->perasaan }}" data-catatan="{{ $record->catatan }}">Edit</button>
+                            <form action="{{ route('diari.destroy', $record->id) }}" method="POST"
+                                onsubmit="return confirm('Apakah Anda yakin ingin menghapus catatan ini?');"
+                                style="display:inline;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn-action delete-btn">Hapus</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             @empty
@@ -347,6 +394,135 @@
 
             <!-- <button class="btn-muat-lebihBanyak">Muat Lebih Banyak</button> -->
         </section>
+
+        <div id="editMoodModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Edit Catatan Diari</h2>
+                <form id="editMoodForm" method="POST" action="">
+                    @csrf
+                    @method('PUT')
+                    <input type="hidden" name="mood_id" id="edit_mood_id">
+                    <div class="form-group">
+                        <label for="edit_perasaan">Perasaan:</label>
+                        <select name="perasaan" id="edit_perasaan" required>
+                            <option value="Ceria">Ceria</option>
+                            <option value="Senang">Senang</option>
+                            <option value="Sedih">Sedih</option>
+                            <option value="Marah">Marah</option>
+                            <option value="Khawatir">Khawatir</option>
+                            <option value="Lelah">Lelah</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit_catatan">Catatan:</label>
+                        <textarea name="catatan" id="edit_catatan" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-mood">Simpan Perubahan</button>
+                </form>
+            </div>
+        </div>
+
+        <style>
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.4);
+                padding-top: 60px;
+            }
+
+            .modal-content {
+                background-color: #fefefe;
+                margin: 5% auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%;
+                max-width: 500px;
+                border-radius: 10px;
+                position: relative;
+            }
+
+            .close-button {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .close-button:hover,
+            .close-button:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            .form-group {
+                margin-bottom: 15px;
+            }
+
+            .form-group label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: 600;
+            }
+
+            .form-group input[type="text"],
+            .form-group select,
+            .form-group textarea {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+
+            .btn-mood {
+                width: auto;
+                margin-top: 15px;
+            }
+        </style>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const editButtons = document.querySelectorAll('.edit-btn');
+                const modal = document.getElementById('editMoodModal');
+                const closeButton = document.querySelector('.close-button');
+                const editForm = document.getElementById('editMoodForm');
+                const editMoodId = document.getElementById('edit_mood_id');
+                const editPerasaan = document.getElementById('edit_perasaan');
+                const editCatatan = document.getElementById('edit_catatan');
+
+                editButtons.forEach(button => {
+                    button.addEventListener('click', function () {
+                        const id = this.dataset.id;
+                        const perasaan = this.dataset.perasaan;
+                        const catatan = this.dataset.catatan;
+
+                        editMoodId.value = id;
+                        editPerasaan.value = perasaan;
+                        editCatatan.value = catatan;
+                        editForm.action = `/diari/${id}`;
+                        modal.style.display = 'block';
+                    });
+                });
+
+                closeButton.addEventListener('click', function () {
+                    modal.style.display = 'none';
+                });
+
+                window.addEventListener('click', function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = 'none';
+                    }
+                });
+            });
+        </script>
     </main>
     <footer>
         <div class="footer-left">
