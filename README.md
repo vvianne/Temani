@@ -1,8 +1,3 @@
-<p align="center"><a href="https://vercel.com/" target="_blank"><img src="[tautan mencurigakan telah dihapus]" width="200" alt="Temani Logo"></a></p>
-
-<p align="center">
-<a href="[Link ke GitHub Actions / Build Status Anda jika ada]"><img src="https://github.com/octocat/Spoon-Knife/workflows/CI/badge.svg" alt="Build Status"></a> <a href="[Link ke halaman App Store/Play Store jika ada]"><img src="https://img.shields.io/badge/Download%20on-App%20Store-blue?style=flat-square" alt="Download on App Store"></a> <a href="[Link ke Google Play Store jika ada]"><img src="https://img.shields.io/badge/Get%20it%20on-Google%20Play-green?style=flat-square" alt="Get it on Google Play"></a> </p>
-
 <h1 align="center">Temani App 🤰✨</h1>
 
 <p align="center">
